@@ -24,3 +24,9 @@
 Пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
 
 [![asciicast](https://asciinema.org/a/kl1rikCQvoe8HOOCdRMLdTR0b.svg)](https://asciinema.org/a/kl1rikCQvoe8HOOCdRMLdTR0b)
+
+## Progression
+
+Пользователю показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
+
+[![asciicast](https://asciinema.org/a/Pgw7H1iq0ZWe7o0cIsc7ME3hz.svg)](https://asciinema.org/a/Pgw7H1iq0ZWe7o0cIsc7ME3hz)
