@@ -12,3 +12,9 @@
 Пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.
 
 [![asciicast](https://asciinema.org/a/zmJYCRoyJBrMyNEq778rMxUa9.svg)](https://asciinema.org/a/zmJYCRoyJBrMyNEq778rMxUa9)
+
+## Calc
+
+Пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
+
+[![asciicast](https://asciinema.org/a/0dDrRrmIyLJOEwJEcQO6XoGBb.svg)](https://asciinema.org/a/0dDrRrmIyLJOEwJEcQO6XoGBb)
