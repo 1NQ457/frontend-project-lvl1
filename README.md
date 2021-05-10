@@ -18,3 +18,9 @@
 Пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
 
 [![asciicast](https://asciinema.org/a/0dDrRrmIyLJOEwJEcQO6XoGBb.svg)](https://asciinema.org/a/0dDrRrmIyLJOEwJEcQO6XoGBb)
+
+## Gcd
+
+Пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+
+[![asciicast](https://asciinema.org/a/kl1rikCQvoe8HOOCdRMLdTR0b.svg)](https://asciinema.org/a/kl1rikCQvoe8HOOCdRMLdTR0b)
