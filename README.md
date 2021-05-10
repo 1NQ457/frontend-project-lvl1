@@ -30,3 +30,9 @@
 Пользователю показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
 
 [![asciicast](https://asciinema.org/a/Pgw7H1iq0ZWe7o0cIsc7ME3hz.svg)](https://asciinema.org/a/Pgw7H1iq0ZWe7o0cIsc7ME3hz)
+
+## Prime
+
+Пользователю показывается случайное число. И ему нужно ответить yes, если число простое, или no — если составное.
+
+[![asciicast](https://asciinema.org/a/ahR5HCr6Gxbtn0RnR5t8oLFra.svg)](https://asciinema.org/a/ahR5HCr6Gxbtn0RnR5t8oLFra)
