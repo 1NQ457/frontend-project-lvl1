@@ -11,7 +11,17 @@ const makeProgression = (start, length, step, missingIndex) => {
   }
 
   progression[missingIndex] = '..';
-  return progression;
+  return progression.join(' ');
+};
+
+const getMissingNumber = (start, step, index) => {
+  let result = start;
+
+  for (let i = 1; i <= index; i += 1) {
+    result += step;
+  }
+
+  return result;
 };
 
 const generateTask = () => {
@@ -20,9 +30,8 @@ const generateTask = () => {
   const step = generateRandom(30);
   const missingIndex = generateRandom(length - 1);
 
-  const progression = makeProgression(start, length, step, missingIndex);
-  const question = progression.join(' ');
-  const correctAnswer = progression[missingIndex - 1] + step;
+  const question = makeProgression(start, length, step, missingIndex);
+  const correctAnswer = getMissingNumber(start, step, missingIndex);
 
   return [question, String(correctAnswer)];
 };
