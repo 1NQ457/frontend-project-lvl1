@@ -20,7 +20,7 @@ const generateTask = () => {
   const step = generateRandom(30);
   const missingIndex = generateRandom(length - 1);
 
-  const progression = makeProgression(start, length, step, missingIndex)
+  const progression = makeProgression(start, length, step, missingIndex);
   const question = progression.join(' ');
   const correctAnswer = progression[missingIndex - 1] + step;
 
