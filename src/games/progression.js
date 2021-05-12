@@ -1,33 +1,34 @@
 import engine from '../index.js';
+import generateRandom from '../random_generator.js';
 
-const rules = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
 
-const makeProgression = () => {
-  const start = Math.floor(Math.random() * 100);
-  const length = 5 + Math.floor(Math.random() * 5);
-  const step = Math.floor(Math.random() * 30);
-
+const makeProgression = (start, length, step, missingIndex) => {
   const progression = [start];
+
   for (let i = 0; i < length; i += 1) {
     progression.push(progression[i] + step);
   }
 
+  progression[missingIndex] = '..';
   return progression;
 };
 
-const logic = () => {
-  const progression = makeProgression();
-  const missingIndex = Math.floor(Math.random() * progression.length);
+const generateTask = () => {
+  const start = generateRandom(100);
+  const length = 5 + generateRandom(5);
+  const step = generateRandom(30);
+  const missingIndex = generateRandom(length - 1);
 
-  const correctAnswer = progression[missingIndex];
-  progression[missingIndex] = '..';
+  const progression = makeProgression(start, length, step, missingIndex)
   const question = progression.join(' ');
+  const correctAnswer = progression[missingIndex - 1] + step;
 
   return [question, String(correctAnswer)];
 };
 
 const run = () => {
-  engine(rules, logic);
+  engine(gameDescription, generateTask);
 };
 
 export default run;

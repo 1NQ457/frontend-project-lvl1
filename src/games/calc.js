@@ -1,21 +1,22 @@
 import engine from '../index.js';
+import generateRandom from '../random_generator.js';
 
-const rules = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
-const logic = () => {
+const generateTask = () => {
   const operators = ['+', '-', '*'];
 
-  const operand1 = Math.floor(Math.random() * 100);
-  const operand2 = Math.floor(Math.random() * 100);
-  const operator = operators[Math.floor(Math.random() * operators.length)];
+  const operand1 = generateRandom(100);
+  const operand2 = generateRandom(100);
+  const operator = operators[generateRandom(operators.length)];
 
   const question = `${operand1} ${operator} ${operand2}`;
   let correctAnswer;
   switch (operator) {
-    case operators[0]:
+    case '+':
       correctAnswer = operand1 + operand2;
       break;
-    case operators[1]:
+    case '-':
       correctAnswer = operand1 - operand2;
       break;
     default:
@@ -27,7 +28,7 @@ const logic = () => {
 };
 
 const run = () => {
-  engine(rules, logic);
+  engine(gameDescription, generateTask);
 };
 
 export default run;

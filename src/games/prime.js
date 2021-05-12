@@ -1,8 +1,13 @@
 import engine from '../index.js';
+import generateRandom from '../random_generator.js';
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       return false;
@@ -11,14 +16,14 @@ const isPrime = (num) => {
   return true;
 };
 
-const logic = () => {
-  const question = 1 + Math.floor(Math.random() * 99);
+const generateTask = () => {
+  const question = generateRandom(100);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
 const run = () => {
-  engine(rules, logic);
+  engine(gameDescription, generateTask);
 };
 
 export default run;

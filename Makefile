@@ -17,7 +17,7 @@ brain-progression:
 	./bin/brain-progression.js
 
 brain-prime:
-	./bin/braim-prime.js
+	./bin/brain-prime.js
 
 publish:
 	npm publish --dry-run

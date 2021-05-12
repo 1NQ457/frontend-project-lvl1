@@ -1,14 +1,17 @@
 import readlineSync from 'readline-sync';
-import greeting from './cli.js';
 
-const engine = (rules, logic) => {
-  const name = greeting();
+const engine = (gameDescription, generateTask) => {
+  console.log('Welcome to the Brain Games!');
 
-  console.log(rules);
+  const name = readlineSync.question('May I have your name? ');
 
+  console.log(`Hello, ${name}!`);
+  console.log(gameDescription);
+
+  const attempts = 3;
   let countCorrectAnswers = 0;
-  while (countCorrectAnswers < 3) {
-    const [question, correctAnswer] = logic();
+  while (countCorrectAnswers < attempts) {
+    const [question, correctAnswer] = generateTask();
 
     console.log(`Question: ${question}`);
 
